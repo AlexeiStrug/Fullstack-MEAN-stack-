@@ -1,6 +1,6 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()" class="card">
   <div class="card-content">
-    <span class="card-title">Войти в систему</span>
+    <span class="card-title">Enter to the system</span>
     <div class="input-field">
       <input id="email" type="email" formControlName="email" [ngClass]="{'invalid': form.get('email').invalid && form.get('email').touched}">
       <label for="email">Email:</label>
@@ -11,7 +11,7 @@
     </div>
     <div class="input-field">
       <input id="password" type="password" formControlName="password" [ngClass]="{'invalid': form.get('email').invalid && form.get('email').touched}">
-      <label for="password">Пароль:</label>
+      <label for="password">Password:</label>
       <span class="helper-text red-text" *ngIf="form.get('password').invalid && form.get('password').touched">
         <span *ngIf="form.get('password').errors['required']">Password not should be empty</span>
         <span *ngIf="form.get('password').errors['minlength'] && form.get('password').errors['minlength']['requiredLength']">Password should contains min {{form.get('password').errors['minlength']['requiredLength']}} symbols.
@@ -20,6 +20,6 @@
     </div>
   </div>
   <div class="card-action">
-    <button type="submit" class="modal-action btn waves-effect" [disabled]="form.invalid || form.disabled">Войти</button>
+    <button type="submit" class="modal-action btn waves-effect" [disabled]="form.invalid || form.disabled">Login</button>
   </div>
 </form>
